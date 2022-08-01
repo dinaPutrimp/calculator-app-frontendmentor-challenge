@@ -14,7 +14,8 @@ const Keypad = () => {
     return (
         <div className="calc-function-container">
             <div className={`screen ${theme.class}`}>
-                <p className={`operation-value ${theme.class}`}>{(operator !== "") ? prevNumber : currentNumber}</p>
+                <span></span>
+                <p className={`operation-value ${theme.class}`}>{(operator !== "") ? prevNumber + operator + currentNumber : currentNumber}</p>
             </div>
             <div className={`key-container ${theme.class}`}>
                 <div className="small-box">
