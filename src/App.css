@@ -1,0 +1,596 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&family=Poppins:wght@200&display=swap');
+
+.App {
+    background: hsl(222, 26%, 31%);
+    width: 100vw;
+    height: 100vh;
+    transition: background 0.5s linear;
+}
+
+.App.two {
+    background: hsl(0, 0%, 90%);
+    transition: background 0.5s linear;
+}
+
+.App.three {
+    background: hsl(268, 75%, 9%);
+    transition: background 0.5s linear;
+}
+
+main {
+    padding: 20px;
+}
+
+.header {
+    margin: 30px auto 25px auto;
+    max-width: 350px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: flex-end;
+    /* margin-bottom: 25px; */
+}
+
+.header h3 {
+    color: #ffffff;
+    transition: color 0.5s linear;
+}
+
+.header h3.two {
+    color: #36362b;
+    transition: color 0.5s linear;
+}
+
+.header h3.three {
+    color: hsl(52, 100%, 62%);
+    transition: color 0.5s linear;
+}
+
+.theme {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+.theme p {
+    justify-items: right;
+    margin-left: auto;
+    margin-right: 30px;
+    font-size: 0.6rem;
+    color: #ffffff;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: color 0.5s linear;
+}
+
+.theme p.two {
+    color: #36362b;
+    transition: color 0.5s linear;
+}
+
+.theme p.three {
+    color: hsl(52, 100%, 62%);
+    transition: color 0.5s linear;
+}
+
+.theme .slide-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.slide-container label {
+    display: flex;
+    justify-content: space-around;
+}
+
+label {
+    font-size: 0.6rem;
+    color: #ffffff;
+    font-weight: 300;
+    margin-bottom: 2px;
+    transition: color 0.5s linear;
+}
+
+label.two {
+    color: #36362b;
+    transition: color 0.5s linear;
+}
+
+label.three {
+    color: hsl(52, 100%, 62%);
+    transition: color 0.5s linear;
+}
+
+.slide-container input {
+    max-width: 54px;
+    max-height: 54px;
+    width: 100%;
+    margin-left: auto;
+}
+
+/* Styling range input */
+input[type=range] {
+    -webkit-appearance: none;
+    /* Hides the slider so that custom slider can be made */
+    width: 100%;
+    /* Specific width is required for Firefox. */
+    background: none;
+    /* Otherwise white in Chrome */
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+    outline: none;
+    background: transparent;
+    /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type=range]::-ms-track {
+    width: 100%;
+    cursor: pointer;
+    /* Hides the slider so custom styles can be added */
+    background: transparent;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 10px;
+    width: 10px;
+    border-radius: 50px;
+    background: hsl(6, 63%, 50%);
+    cursor: pointer;
+    margin-top: 2px;
+    transition: background 0.5s linear;
+    /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+}
+
+input[type=range]::-webkit-slider-thumb:hover {
+    background-image: linear-gradient(rgba(236, 233, 233, 0.2) 0 0);
+}
+
+input[type=range].two::-webkit-slider-thumb {
+    background: hsl(25, 98%, 40%);
+    transition: background 0.5s linear;
+}
+
+input[type=range].two::-webkit-slider-thumb:hover {
+    background-image: linear-gradient(rgba(236, 233, 233, 0.2) 0 0);
+}
+
+input[type=range].three::-webkit-slider-thumb {
+    background: hsl(176, 100%, 44%);
+    transition: background 0.5s linear;
+}
+
+input[type=range].three::-webkit-slider-thumb:hover {
+    background-image: linear-gradient(rgba(236, 233, 233, 0.5) 0 0);
+}
+
+input[type=range]::-moz-range-thumb {
+    border: none;
+    height: 10px;
+    width: 10px;
+    border-radius: 50px;
+    background: hsl(6, 63%, 50%);
+    transition: background 0.5s linear;
+    cursor: pointer;
+}
+
+input[type=range].two::-moz-range-thumb {
+    background: hsl(25, 98%, 40%);
+    transition: background 0.5s linear;
+}
+
+input[type=range].three::-moz-range-thumb {
+    background: hsl(176, 100%, 44%);
+    transition: background 0.5s linear;
+}
+
+input[type=range]::-ms-thumb {
+    border: none;
+    height: 10px;
+    width: 10px;
+    border-radius: 50px;
+    background: hsl(6, 63%, 50%);
+    transition: background 0.5s linear;
+    cursor: pointer;
+}
+
+input[type=range].two::-ms-thumb {
+    background: hsl(25, 98%, 40%);
+    transition: background 0.5s linear;
+}
+
+input[type=range].three::-ms-thumb {
+    background: hsl(176, 100%, 44%);
+    transition: background 0.5s linear;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 14px;
+    cursor: pointer;
+    padding: 0px 2px;
+    background: hsl(223, 31%, 20%);
+    transition: background 0.5s linear;
+    border-radius: 50px;
+    border: none;
+}
+
+input[type=range].two::-webkit-slider-runnable-track {
+    background: hsl(0, 5%, 81%);
+    transition: background 0.5s linear;
+}
+
+input[type=range].three::-webkit-slider-runnable-track {
+    background: hsl(268, 71%, 12%);
+    transition: background 0.5s linear;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: hsl(223, 31%, 20%);
+    transition: background 0.5s linear;
+}
+
+input[type=range].two:focus::-webkit-slider-runnable-track {
+    background: hsl(0, 5%, 81%);
+    transition: background 0.5s linear;
+}
+
+input[type=range].three:focus::-webkit-slider-runnable-track {
+    background: hsl(268, 71%, 12%);
+    transition: background 0.5s linear;
+}
+
+input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 14px;
+    cursor: pointer;
+    background: hsl(223, 31%, 20%);
+    border-radius: 50px;
+    border: none;
+}
+
+input[type=range].two::-moz-range-track {
+    background: hsl(0, 5%, 81%);
+    transition: background 0.5s linear;
+}
+
+input[type=range].three::-moz-range-track {
+    background: hsl(268, 71%, 12%);
+    transition: background 0.5s linear;
+}
+
+input[type=range]::-ms-track {
+    width: 100%;
+    height: 14px;
+    cursor: pointer;
+    background: none;
+    border-color: transparent;
+    color: transparent;
+}
+
+input[type=range]::-ms-fill-lower {
+    background: hsl(223, 31%, 20%);
+    border: none;
+    border-radius: 50px;
+    transition: background 0.5s linear;
+}
+
+input[type=range].two::-ms-fill-lower {
+    background: hsl(0, 5%, 81%);
+    transition: background 0.5s linear;
+}
+
+input[type=range].three::-ms-fill-lower {
+    background: hsl(268, 71%, 12%);
+    transition: background 0.5s linear;
+}
+
+input[type=range]::-ms-fill-upper {
+    background: hsl(223, 31%, 20%);
+    transition: background 0.5s linear;
+    border: none;
+    border-radius: 50px;
+}
+
+input[type=range].two::-ms-fill-upper {
+    background: hsl(0, 5%, 81%);
+    transition: background 0.5s linear;
+}
+
+input[type=range].three::-ms-fill-upper {
+    background: hsl(268, 71%, 12%);
+    transition: background 0.5s linear;
+}
+
+/* Main */
+.calc-function-container {
+    max-width: 350px;
+    width: 100%;
+    margin: 25px auto 30px auto;
+    /* margin-bottom: 50px; */
+}
+
+.screen {
+    display: grid;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    border-radius: 10px;
+    background: hsl(224, 36%, 15%);
+    transition: background 0.5s linear;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.screen.two {
+    background: hsl(0, 0%, 93%);
+    transition: background 0.5s linear;
+}
+
+.screen.three {
+    background: hsl(268, 71%, 12%);
+    transition: background 0.5s linear;
+}
+
+.operation-value {
+    color: #ffffff;
+    font-size: 32px;
+}
+
+.operation-value.two {
+    font-size: 32px;
+    color: #35352c;
+}
+
+.operation-value.three {
+    color: #ffe53d;
+    font-size: 32px;
+}
+
+.key-container {
+    width: 100%;
+    border-radius: 10px;
+    background: hsl(223, 31%, 20%);
+    transition: background 0.5s linear;
+    padding: 20px;
+}
+
+.key-container.two {
+    background: hsl(0, 5%, 81%);
+    transition: background 0.5s linear;
+}
+
+.key-container.three {
+    background: hsl(268, 71%, 12%);
+    transition: background 0.5s linear;
+}
+
+.key-container input:active {
+    transform: scale(0.9);
+}
+
+.small-box {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 20px;
+    margin-bottom: 20px;
+}
+
+.small-box>.box {
+    background: hsl(30, 25%, 89%);
+    text-align: center;
+    font-weight: 700;
+    font-size: 26px;
+    font-family: 'League Spartan', sans-serif;
+    color: #444b5a;
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    border: 0;
+    box-shadow: 0px 2px 0px hsl(28, 16%, 65%);
+    cursor: pointer;
+    transition: background 0.5s linear;
+}
+
+.small-box>.box:hover {
+    background-image: linear-gradient(rgb(255, 255, 255) 0 0);
+}
+
+.small-box>.box.two {
+    color: #35352c;
+    background: hsl(45, 7%, 89%);
+    box-shadow: 0px 2px 0px hsl(35, 11%, 61%);
+    transition: background 0.5s linear;
+}
+
+.small-box>.box.two:hover {
+    background-image: linear-gradient(rgb(255, 255, 255) 0 0);
+}
+
+.small-box>.box.three {
+    color: #ffe53d;
+    background: hsl(268, 47%, 21%);
+    box-shadow: 0px 2px 0px hsl(290, 70%, 36%);
+    transition: background 0.5s linear;
+}
+
+.small-box>.box.three:hover {
+    background-image: linear-gradient(rgba(91, 9, 184, 0.753) 0 0);
+}
+
+.small-box .box:nth-of-type(4) {
+    background: hsl(225, 21%, 49%);
+    text-transform: uppercase;
+    color: #ffffff;
+    outline: none;
+    border: 0;
+    font-size: 20px;
+    box-shadow: 0px 2px 0px hsl(224, 28%, 35%);
+    transition: background 0.5s linear;
+}
+
+.small-box .box.two:nth-of-type(4) {
+    background: hsl(185, 42%, 37%);
+    box-shadow: 0px 2px 0px hsl(185, 58%, 25%);
+    transition: background 0.5s linear;
+}
+
+.small-box .box.three:nth-of-type(4) {
+    background: hsl(281, 89%, 26%);
+    box-shadow: 0px 2px 0px hsl(285, 91%, 52%);
+    transition: background 0.5s linear;
+}
+
+.small-box .box:nth-of-type(4):hover {
+    background-image: linear-gradient(rgba(236, 233, 233, 0.4) 0 0);
+}
+
+/* .small-box .box.two:nth-of-type(4):hover {
+    background-image: linear-gradient(rgba(236, 233, 233, 0.4) 0 0);
+} */
+
+.small-box .box.three:nth-of-type(4):hover {
+    background-image: linear-gradient(rgba(188, 21, 244, 0.322) 0 0);
+}
+
+.medium-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-gap: 20px;
+}
+
+.medium-box .m-box:first-child {
+    background: hsl(225, 21%, 49%);
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+    font-family: 'League Spartan', sans-serif;
+    padding: 10px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    /* letter-spacing: 2px; */
+    color: #ffffff;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    box-shadow: 0px 2px 0px hsl(224, 28%, 35%);
+    transition: background 0.5s linear;
+}
+
+.medium-box .m-box.two:first-child {
+    background: hsl(185, 42%, 37%);
+    box-shadow: 0px 2px 0px hsl(185, 58%, 25%);
+    transition: background 0.5s linear;
+}
+
+.medium-box .m-box.three:first-child {
+    background: hsl(281, 89%, 26%);
+    box-shadow: 0px 2px 0px hsl(285, 91%, 52%);
+    transition: background 0.5s linear;
+}
+
+.medium-box .m-box:first-child:hover {
+    background-image: linear-gradient(rgba(236, 233, 233, 0.4) 0 0);
+}
+
+/* .medium-box .m-box.two:first-child:hover {
+    background-image: linear-gradient(rgba(236, 233, 233, 0.4) 0 0);
+} */
+
+.medium-box .m-box.three:first-child:hover {
+    background-image: linear-gradient(rgba(188, 21, 244, 0.322) 0 0);
+}
+
+.medium-box .m-box:last-child {
+    background: hsl(6, 63%, 50%);
+    font-weight: 700;
+    font-size: 20px;
+    font-family: 'League Spartan', sans-serif;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    color: #ffffff;
+    outline: none;
+    border: 0;
+    box-shadow: 0px 2px 0px hsl(6, 70%, 34%);
+    cursor: pointer;
+    transition: background 0.5s linear;
+}
+
+.medium-box .m-box.two:last-child {
+    background: hsl(25, 98%, 40%);
+    box-shadow: 0px 2px 0px hsl(25, 99%, 27%);
+    transition: background 0.5s linear;
+}
+
+.medium-box .m-box.three:last-child {
+    background: hsl(176, 100%, 44%);
+    box-shadow: 0px 2px 0px hsl(177, 92%, 70%);
+    transition: background 0.5s linear;
+    color: #35352c;
+}
+
+.medium-box .m-box:last-child:hover {
+    background-image: linear-gradient(rgba(236, 233, 233, 0.2) 0 0);
+}
+
+/* .medium-box .m-box.two:last-child:hover {
+    background-image: linear-gradient(rgba(236, 233, 233, 0.2) 0 0);
+} */
+
+.medium-box .m-box.three:last-child:hover {
+    background-image: linear-gradient(rgba(236, 233, 233, 0.5) 0 0);
+}
+
+/* Footer */
+.footer {
+    max-width: 350px;
+    width: 100%;
+    margin: 10px auto;
+    font-weight: 200;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.footer span {
+    color: #ffffff;
+}
+
+.footer span.two {
+    color: #35352c;
+}
+
+.footer span.three {
+    color: #ffe53d;
+}
+
+@media screen and (max-width: 375px) {
+    .App {
+        height: 100%;
+    }
+
+    main {
+        margin: 0 auto;
+        padding: 20px;
+        /* overflow: hidden; */
+    }
+
+    .header {
+        margin: 0px 0px 15px 0px;
+    }
+
+    .calc-function-container {
+        margin: 0;
+    }
+
+}
