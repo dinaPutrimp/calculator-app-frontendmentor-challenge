@@ -8,13 +8,13 @@ const Keypad = () => {
     const theme = (toggleValue === "1") ? one : (toggleValue === "2") ? two : (toggleValue === "3") ? three : toggleValue;
 
     // Calc Operation
-    const { currentNumber } = useContext(OperationContext);
+    const { prevNumber, currentNumber, operator } = useContext(OperationContext);
     const { handleInput, operatorEvent, calculate, actionDelete, actionReset } = useContext(OperationContext);
 
     return (
         <div className="calc-function-container">
             <div className={`screen ${theme.class}`}>
-                <p className={`operation-value ${theme.class}`}>{currentNumber}</p>
+                <p className={`operation-value ${theme.class}`}>{(operator !== "") ? prevNumber : currentNumber}</p>
             </div>
             <div className={`key-container ${theme.class}`}>
                 <div className="small-box">
